@@ -2917,13 +2917,6 @@ export default {
         
         // Get initial recommendations using the appropriate service method based on mode
         if (this.isMovieMode) {
-          
-          
-          
-          
-          
-          
-          
           try {
             // Use movie recommendations method
             this.recommendations = await openAIService.getMovieRecommendations(
