@@ -1,7 +1,7 @@
 # Build stage
 FROM registry.redhat.io/ubi9/nodejs-20:latest as build-stage
 WORKDIR /app
-COPY package*.json ./
+COPY package.json ./
 RUN npm install
 COPY . .
 
