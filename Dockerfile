@@ -1,5 +1,5 @@
 # Build stage
-FROM node:22-alpine as build-stage
+FROM registry.redhat.io/ubi9/nodejs-20:latest as build-stage
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
@@ -16,7 +16,7 @@ ENV BASE_URL=${BASE_URL}
 RUN npm run build
 
 # Final stage
-FROM node:22-alpine
+FROM registry.redhat.io/ubi9/nodejs-20:latest
 WORKDIR /app
 
 # Copy package files and install production dependencies
