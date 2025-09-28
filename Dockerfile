@@ -20,7 +20,7 @@ FROM registry.redhat.io/ubi9/nodejs-20:latest
 WORKDIR /app
 
 # Copy package files and install production dependencies
-COPY package*.json ./
+COPY package.json ./
 RUN npm install --production
 
 # Copy server files
