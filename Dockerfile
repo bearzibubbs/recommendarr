@@ -37,7 +37,7 @@ ENV PORT=3000
 # Copy startup script and ensure it uses the correct line endings
 COPY start-unified.sh /start-unified.sh
 # Install dos2unix to fix line endings
-RUN apk add --no-cache dos2unix && dos2unix /start-unified.sh && chmod +x /start-unified.sh
+RUN dnf install --no-cache dos2unix && dos2unix /start-unified.sh && chmod +x /start-unified.sh
 
 # Expose port
 EXPOSE 3000
