@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/ubi9/nodejs-22:latest
       
 USER 0
 
-ENV NODE_ENV=production
+# ENV NODE_ENV=production
       
 # Install git for cloning and any additional dependencies
 RUN dnf update -y && \
